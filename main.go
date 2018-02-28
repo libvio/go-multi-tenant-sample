@@ -10,8 +10,6 @@ import (
 	"github.com/jmoiron/sqlx"
 
 	"./tenant"
-
-	_ "github.com/go-sql-driver/mysql"
 )
 
 // Item type
