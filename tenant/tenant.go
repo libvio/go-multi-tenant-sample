@@ -40,9 +40,9 @@ func GetTenantDb(name string) (*sqlx.DB, error) {
 		return nil, err
 	}
 	a, err := sqlx.Open("mysql", fmt.Sprintf("%s:%s@(%s:%d)/%s", con.User, con.Password, con.Host, con.Port, con.Dbname))
-	catalog[name] = a
 	if err != nil {
 		return nil, err
 	}
+	catalog[name] = a
 	return a, nil
 }
